@@ -43,6 +43,9 @@
     align-items: center;
     justify-content: center;
     border-radius: 8px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
 }
 
 .lien-photo img {
@@ -60,6 +63,77 @@
 .lien-photo:focus-visible {
     outline: 2px solid darkblue;
     outline-offset: 2px;
+}
+
+.lien-photo:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.lien-photo:disabled:hover {
+    background: transparent;
+}
+
+.photo-dialog {
+    box-sizing: border-box;
+    width: fit-content;
+    max-width: 90vw;
+    max-height: 90vh;
+    max-height: 90dvh;
+    padding: 1rem;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 25%);
+}
+
+.photo-dialog::backdrop {
+    background: rgb(0 0 0 / 70%);
+}
+
+.photo-dialog figure {
+    margin: 0;
+}
+
+.photo-dialog-image {
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.photo-dialog-credit {
+    margin-top: 0.5rem;
+    color: #555;
+    font-size: 0.7rem;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.photo-dialog-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 90%);
+    color: #222;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.photo-dialog-close:focus-visible {
+    outline: 2px solid darkblue;
+    outline-offset: 2px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
 
 @media (max-width: 750px) {

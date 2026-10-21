@@ -1,34 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Podcast - Mystérieux animaux</title>
-        <link href="style.css" rel="stylesheet">
-    </head>
-    <body>
-        <h1 class="titre">Podcast<br>Mystérieux animaux</h1>
-        <main class="episodes">
-            <div class="episode">
-                <div class="titre-episode">La tortue léopard</div>
-                <div class="player"><audio controls src="./episodes/Episode-1.mp3"></audio></div>
-                <div class="lien-container"><a class="lien-photo" href="#" aria-label="Voir les photos de la tortue léopard"><img src="icone-photos.svg" alt=""></a></div>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Podcast - Mystérieux animaux</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="titre">Podcast<br>Mystérieux animaux</h1>
+    <main class="episodes">
+        <div class="episode">
+            <div class="titre-episode">La tortue léopard</div>
+            <div class="player"><audio controls src="./episodes/Episode-1.mp3"></audio></div>
+            <div class="lien-container"><button class="lien-photo" type="button"
+                    aria-label="Voir la photo de la tortue léopard"
+                    data-photo-src="images/tortue-leopard-main-12615355.webp"
+                    data-photo-alt="Tortue léopard sur un sol sableux" data-photo-title="La tortue léopard"
+                    data-photo-credit="© Alta Oosthuizen/123RF"><img src="icone-photos.svg" alt=""></button></div>
+        </div>
+        <div class="episode">
+            <div class="titre-episode">Le toucan toco</div>
+            <div class="player"><audio controls src="./episodes/Episode-2.mp3"></audio></div>
+            <div class="lien-container"><button class="lien-photo" type="button"
+                    aria-label="Voir la photo du toucan toco"
+                    data-photo-src="images/006_Toco_toucan_in_Encontro_das_Águas_State_Park_Photo_by_Giles_Laurent.jpg"
+                    data-photo-alt="Toucan toco sur une branche" data-photo-title="Le toucan toco"
+                    data-photo-credit="© Giles Laurent, gileslaurent.com, License CC BY-SA, CC BY-SA 4.0"><img
+                        src="icone-photos.svg" alt=""></button>
             </div>
-            <div class="episode">
-                <div class="titre-episode">Le toucan toco</div>
-                <div class="player"><audio controls src="./episodes/Episode-2.mp3"></audio></div>
-                <div class="lien-container"><a class="lien-photo" href="#" aria-label="Voir les photos du toucan toco"><img src="icone-photos.svg" alt=""></a></div>
+        </div>
+        <div class="episode">
+            <div class="titre-episode">L'élan</div>
+            <div class="player"><audio controls src="./episodes/Episode-3.mp3"></audio></div>
+            <div class="lien-container"><button class="lien-photo" type="button" aria-label="Voir la photo de l'élan"
+                    data-photo-src="images/Alaskan_moose_pair_(6862339335).jpg" data-photo-alt="Elan mâle et femelle"
+                    data-photo-title="L'élan"><img src="icone-photos.svg" alt=""></button>
             </div>
-            <div class="episode">
-                <div class="titre-episode">L'élan</div>
-                <div class="player"><audio controls src="./episodes/Episode-3.mp3"></audio></div>
-                <div class="lien-container"><a class="lien-photo" href="#" aria-label="Voir les photos de l’élan"><img src="icone-photos.svg" alt=""></a></div>
+        </div>
+        <div class="episode">
+            <div class="titre-episode">Le binturong</div>
+            <div class="player"><audio controls src="./episodes/Episode-4.mp3"></audio></div>
+            <div class="lien-container"><button class="lien-photo" type="button"
+                    aria-label="Voir la photo du binturong"
+                    data-photo-src="images/binturong2.jpg"
+                    data-photo-alt="Binturong se promenant sur une branche" data-photo-title="Le toucan toco"
+                    data-photo-credit="© Espace zoologique St-Martin la plaine"><img
+                        src="icone-photos.svg" alt=""></button>
             </div>
-            <div class="episode">
-                <div class="titre-episode">Le binturong</div>
-                <div class="player"><audio controls src="./episodes/Episode-4.mp3"></audio></div>
-                <div class="lien-container"><a class="lien-photo" href="#" aria-label="Voir les photos du binturong"><img src="icone-photos.svg" alt=""></a></div>
-            </div>
-        </main>
-    </body>
+        </div>
+    </main>
+    <dialog class="photo-dialog" aria-labelledby="photo-dialog-title">
+        <button class="photo-dialog-close" type="button" aria-label="Fermer la photo">×</button>
+        <h2 id="photo-dialog-title" class="visually-hidden"></h2>
+        <figure>
+            <img class="photo-dialog-image" alt="">
+            <figcaption class="photo-dialog-credit" hidden></figcaption>
+        </figure>
+    </dialog>
+    <script src="photos.js" defer></script>
+</body>
+
 </html>
