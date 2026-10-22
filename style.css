@@ -50,6 +50,30 @@ body::before {
     user-select: none;
 }
 
+/* Opaque at the edges, fading toward the content, beneath the leaves. */
+.foliage::before,
+.foliage::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: clamp(80px, 12vh, 125px);
+    content: "";
+}
+
+.foliage::before {
+    top: 0;
+    background: linear-gradient(to bottom, #faf8f2 35%, rgb(250 248 242 / 90%) 60%, transparent);
+}
+
+.foliage::after {
+    bottom: 0;
+    background: linear-gradient(to top, #faf8f2 35%, rgb(250 248 242 / 90%) 60%, transparent);
+}
+
+.foliage img {
+    z-index: 1;
+}
+
 .foliage-corner {
     width: clamp(180px, 22vw, 275px);
 }
@@ -78,7 +102,7 @@ body::before {
 .right-edge { right: 0; transform: translateY(-50%) scaleX(-1); }
 
 .titre,
-.episodes {
+.page-content {
     position: relative;
     z-index: 1;
 }
@@ -89,26 +113,86 @@ body::before {
     max-width: 100%;
     margin: 0 auto 1.5rem;
     padding: 0.1em 0.35em;
-    color: darkblue;
+    color: #348044;
     font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(2.25rem, 5vw, 3.5rem);
     line-height: 1.15;
     text-align: center;
 }
 
-.episodes {
+.page-content {
     max-width: 900px;
     margin: 0 auto;
 }
 
+.section {
+    margin-top: 2rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid #d7ded5;
+    border-radius: 16px;
+    background: rgba(250, 248, 242, 0.6);
+}
+
+.section h2 {
+    margin: 0 0 1rem;
+    color: #334d3c;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.5rem, 3vw, 1.85rem);
+}
+
+.introduction p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.episodes-scroll {
+    /* Eight rows of 6.75rem, including their padding and separator. */
+    max-height: 54rem;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    scrollbar-color: #82967c #edf0e8;
+}
+
+.episodes-scroll:focus-visible {
+    outline: 2px solid #334d3c;
+    outline-offset: 4px;
+}
+
+.episodes-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.suggestions iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+}
+
 .episode {
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr) 44px;
     gap: 1.25rem;
     align-items: center;
-    margin-bottom: 1.25rem;
-    padding: 1.25rem 1.5rem;
+    min-height: 6.75rem;
+    padding: 1rem 0.25rem;
     border-bottom: 1px solid #d7ded5;
+}
+
+.episode:last-child {
+    border-bottom: 0;
+}
+
+.numero-episode {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #52635a;
+    font-size: 0.75rem;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .titre-episode,
@@ -118,6 +202,7 @@ body::before {
 }
 
 .titre-episode {
+    margin: 0;
     text-align: left;
     font-size: 1.3rem;
     font-weight: bold;
@@ -248,7 +333,12 @@ body::before {
     .episode {
         grid-template-columns: minmax(0, 1fr);
         gap: 0.75rem;
-        padding: 1.25rem;
+        min-height: 13rem;
+        padding: 1.25rem 0.25rem;
+    }
+
+    .episodes-scroll {
+        max-height: 104rem;
     }
 
     .titre-episode {
