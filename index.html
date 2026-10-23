@@ -12,6 +12,81 @@
 
 <body>
     <div class="page-frame">
+        <header class="page-header">
+            <img class="title-animal" src="assets/fennec.png" width="856" height="724" alt="" aria-hidden="true">
+            <h1 class="titre">Podcast<br>Mystérieux animaux</h1>
+            <img class="title-animal" src="assets/pangolin.png" width="856" height="724" alt="" aria-hidden="true">
+        </header>
+        <main class="page-content">
+            <section class="section introduction" aria-labelledby="introduction-title">
+                <!-- <h2 id="introduction-title">Bienvenue dans Mystérieux animaux</h2> -->
+                <p>
+                    Bienvenue&nbsp;! J'ai créé ce podcast pour vous faire découvrir ou enrichir vos connaissances sur
+                    les animaux.
+                    J'espère que vous apprendrez beaucoup de choses nouvelles avec ses épisodes&nbsp;!
+
+                </p>
+            </section>
+            <section class="section episodes" aria-labelledby="episodes-title">
+                <h2 id="episodes-title">Les épisodes</h2>
+                <div class="episodes-scroll" role="region" aria-labelledby="episodes-title"
+                    aria-describedby="episodes-description" tabindex="0">
+                    <ol class="episodes-list" reversed>
+                        <li class="episode" value="4">
+                            <h3 class="titre-episode"><span class="numero-episode">Épisode 4</span>Le binturong</h3>
+                            <div class="player"><audio controls src="./episodes/Episode-4.mp3"></audio></div>
+                            <div class="lien-container"><button class="lien-photo" type="button"
+                                    aria-label="Voir la photo du binturong" data-photo-src="images/binturong2.jpg"
+                                    data-photo-alt="Binturong se promenant sur une branche"
+                                    data-photo-title="Le binturong"
+                                    data-photo-credit="© Espace zoologique St-Martin la plaine"><img
+                                        src="icone-photos.svg" alt=""></button>
+                            </div>
+                        </li>
+                        <li class="episode" value="3">
+                            <h3 class="titre-episode"><span class="numero-episode">Épisode 3</span>L'élan</h3>
+                            <div class="player"><audio controls src="./episodes/Episode-3.mp3"></audio></div>
+                            <div class="lien-container"><button class="lien-photo" type="button"
+                                    aria-label="Voir la photo de l'élan"
+                                    data-photo-src="images/Alaskan_moose_pair_(6862339335).jpg"
+                                    data-photo-alt="Elan mâle et femelle" data-photo-title="L'élan"><img
+                                        src="icone-photos.svg" alt=""></button>
+                            </div>
+                        </li>
+                        <li class="episode" value="2">
+                            <h3 class="titre-episode"><span class="numero-episode">Épisode 2</span>Le toucan toco</h3>
+                            <div class="player"><audio controls src="./episodes/Episode-2.mp3"></audio></div>
+                            <div class="lien-container"><button class="lien-photo" type="button"
+                                    aria-label="Voir la photo du toucan toco"
+                                    data-photo-src="images/006_Toco_toucan_in_Encontro_das_Águas_State_Park_Photo_by_Giles_Laurent.jpg"
+                                    data-photo-alt="Toucan toco sur une branche" data-photo-title="Le toucan toco"
+                                    data-photo-credit="© Giles Laurent, gileslaurent.com, License CC BY-SA, CC BY-SA 4.0"><img
+                                        src="icone-photos.svg" alt=""></button>
+                            </div>
+                        </li>
+                        <li class="episode" value="1">
+                            <h3 class="titre-episode"><span class="numero-episode">Épisode 1</span>La tortue léopard
+                            </h3>
+                            <div class="player"><audio controls src="./episodes/Episode-1.mp3"></audio></div>
+                            <div class="lien-container"><button class="lien-photo" type="button"
+                                    aria-label="Voir la photo de la tortue léopard"
+                                    data-photo-src="images/tortue-leopard-main-12615355.webp"
+                                    data-photo-alt="Tortue léopard sur un sol sableux"
+                                    data-photo-title="La tortue léopard"
+                                    data-photo-credit="© Alta Oosthuizen/123RF"><img src="icone-photos.svg"
+                                        alt=""></button></div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <section class="section suggestions" aria-labelledby="suggestions-title">
+                <h2 id="suggestions-title">Proposer un animal</h2>
+                <iframe
+                    data-tally-src="https://tally.so/embed/X5xzJe?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    loading="lazy" width="100%" height="484" frameborder="0" marginheight="0" marginwidth="0"
+                    title="Proposer un animal"></iframe>
+            </section>
+        </main>
         <div class="foliage" aria-hidden="true">
             <img class="foliage-corner top-left" src="assets/feuillage-coin-haut-gauche.png" alt="">
             <img class="foliage-corner top-right" src="assets/feuillage-coin-haut-droit.png" alt="">
@@ -22,72 +97,6 @@
             <img class="foliage-edge left-edge" src="assets/feuillage-bord-vertical.png" alt="">
             <img class="foliage-edge right-edge" src="assets/feuillage-bord-vertical.png" alt="">
         </div>
-    <header class="page-header">
-        <img class="title-animal" src="assets/fennec.png" width="856" height="724" alt="" aria-hidden="true">
-        <h1 class="titre">Podcast<br>Mystérieux animaux</h1>
-        <img class="title-animal" src="assets/pangolin.png" width="856" height="724" alt="" aria-hidden="true">
-    </header>
-    <main class="page-content">
-        <section class="section introduction" aria-labelledby="introduction-title">
-            <!-- <h2 id="introduction-title">Bienvenue dans Mystérieux animaux</h2> -->
-            <p>
-          Bienvenue&nbsp;! J'ai créé ce podcast pour vous faire découvrir ou enrichir vos connaissances sur les animaux.
-          J'espère que vous apprendrez beaucoup de choses nouvelles avec ses épisodes&nbsp;!
-
-            </p>
-        </section>
-        <section class="section episodes" aria-labelledby="episodes-title">
-            <h2 id="episodes-title">Les épisodes</h2>
-            <div class="episodes-scroll" role="region" aria-labelledby="episodes-title" aria-describedby="episodes-description" tabindex="0">
-                <ol class="episodes-list" reversed>
-        <li class="episode" value="4">
-            <h3 class="titre-episode"><span class="numero-episode">Épisode 4</span>Le binturong</h3>
-            <div class="player"><audio controls src="./episodes/Episode-4.mp3"></audio></div>
-            <div class="lien-container"><button class="lien-photo" type="button"
-                    aria-label="Voir la photo du binturong"
-                    data-photo-src="images/binturong2.jpg"
-                    data-photo-alt="Binturong se promenant sur une branche" data-photo-title="Le binturong"
-                    data-photo-credit="© Espace zoologique St-Martin la plaine"><img
-                        src="icone-photos.svg" alt=""></button>
-            </div>
-        </li>
-        <li class="episode" value="3">
-            <h3 class="titre-episode"><span class="numero-episode">Épisode 3</span>L'élan</h3>
-            <div class="player"><audio controls src="./episodes/Episode-3.mp3"></audio></div>
-            <div class="lien-container"><button class="lien-photo" type="button" aria-label="Voir la photo de l'élan"
-                    data-photo-src="images/Alaskan_moose_pair_(6862339335).jpg" data-photo-alt="Elan mâle et femelle"
-                    data-photo-title="L'élan"><img src="icone-photos.svg" alt=""></button>
-            </div>
-        </li>
-        <li class="episode" value="2">
-            <h3 class="titre-episode"><span class="numero-episode">Épisode 2</span>Le toucan toco</h3>
-            <div class="player"><audio controls src="./episodes/Episode-2.mp3"></audio></div>
-            <div class="lien-container"><button class="lien-photo" type="button"
-                    aria-label="Voir la photo du toucan toco"
-                    data-photo-src="images/006_Toco_toucan_in_Encontro_das_Águas_State_Park_Photo_by_Giles_Laurent.jpg"
-                    data-photo-alt="Toucan toco sur une branche" data-photo-title="Le toucan toco"
-                    data-photo-credit="© Giles Laurent, gileslaurent.com, License CC BY-SA, CC BY-SA 4.0"><img
-                        src="icone-photos.svg" alt=""></button>
-            </div>
-        </li>
-        <li class="episode" value="1">
-            <h3 class="titre-episode"><span class="numero-episode">Épisode 1</span>La tortue léopard</h3>
-            <div class="player"><audio controls src="./episodes/Episode-1.mp3"></audio></div>
-            <div class="lien-container"><button class="lien-photo" type="button"
-                    aria-label="Voir la photo de la tortue léopard"
-                    data-photo-src="images/tortue-leopard-main-12615355.webp"
-                    data-photo-alt="Tortue léopard sur un sol sableux" data-photo-title="La tortue léopard"
-                    data-photo-credit="© Alta Oosthuizen/123RF"><img src="icone-photos.svg" alt=""></button></div>
-        </li>
-                </ol>
-            </div>
-        </section>
-        <section class="section suggestions" aria-labelledby="suggestions-title">
-            <h2 id="suggestions-title">Proposer un animal</h2>
-        <iframe data-tally-src="https://tally.so/embed/X5xzJe?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="484" frameborder="0" marginheight="0" marginwidth="0" title="Proposer un animal"></iframe>
-        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-        </section>
-    </main>
     </div>
     <dialog class="photo-dialog" aria-labelledby="photo-dialog-title">
         <button class="photo-dialog-close" type="button" aria-label="Fermer la photo">×</button>
@@ -99,6 +108,7 @@
     </dialog>
     <script src="photos.js" defer></script>
     <script src="players.js" defer></script>
+    <script src="tally.js" defer></script>
 </body>
 
 </html>
