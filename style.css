@@ -293,6 +293,21 @@ body::before {
     background: rgb(0 0 0 / 70%);
 }
 
+.photo-dialog[data-photo-state="loading"],
+.photo-dialog[data-photo-state="error"] {
+    width: min(32rem, 90vw);
+    min-height: 10rem;
+}
+
+.photo-dialog-status {
+    margin: 2.5rem 1rem;
+    text-align: center;
+}
+
+.photo-dialog-image[hidden] {
+    display: none;
+}
+
 .photo-dialog figure {
     margin: 0;
 }
